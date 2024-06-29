@@ -1,0 +1,6 @@
+<launch>
+    <node pkg="read_yaml" type="read_yaml_node" name="read_yaml_node" />
+    <node name="map_server" pkg="map_server" type="map_server" args="$(find read_yaml)/maps/map.yaml" />
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find read_yaml)/rviz/default.rviz"/>
+</launch>
+  
